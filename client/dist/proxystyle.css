@@ -1,0 +1,113 @@
+
+
+.page {
+  height: 5000px;
+  width: 1400px;
+  display: grid;
+  grid-template-areas: "nav  nav  nav  nav  nav  nav"
+                       "gal  gal  gal  gal gal  gal"
+                       "gal  gal  gal  gal gal  gal"
+                       "desc  desc  desc  cal  cal  cal"
+                       "desc  desc  desc  cal  cal  cal"
+                       "sleeping  sleeping  sleeping  cal  cal  cal"
+                       "sleeping  sleeping  sleeping  cal  cal  cal"
+                       "fcal  fcal  fcal  cal  cal  cal"
+                       "rev  rev  rev  rev  rev  rev"
+                       "location  location  location  location  location  location"
+                       "host  host  host  host  host  host"
+                       "thingstoknow  thingstoknow  thingstoknow  thingstoknow  thingstoknow  thingstoknow"
+                       "more  more  more  more  more  more"
+                       "bottomnav  bottomnav  bottomnav  bottomnav  bottomnav  bottomnav";
+  /* grid-template-rows: auto; */
+
+  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.nav {
+  width: auto;
+  height: auto;
+  grid-area: nav;
+}
+
+
+/* img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+} */
+
+.gal {
+  grid-area: gal;
+}
+
+.cal {
+  grid-area: cal;
+  position: fixed;
+  margin-left: 50%;
+  top: 25%;
+  right: 12%;
+  /* align-content: flex-end; */
+}
+
+.more {
+  grid-area: more;
+  padding-top: 75px;
+}
+
+.desc {
+  width: auto;
+  height: auto;
+  grid-area: desc;
+  margin-left: 50px;
+}
+
+.sleeping {
+  width: auto;
+  height: auto;
+  grid-area: sleeping;
+  margin-left: 50px;
+}
+
+.rev {
+  width: auto;
+  height: auto;
+  grid-area: rev;
+  margin-left: 50px;
+}
+
+.bottomnav {
+  width: auto;
+  height: auto;
+  grid-area: bottomnav;
+  vertical-align: bottom;
+  margin-left: 50px;
+}
+
+.fcal {
+  width: auto;
+  height: auto;
+  grid-area: fcal;
+  margin-left: 50px;
+}
+
+.thingstoknow {
+  width: auto;
+  height: auto;
+  grid-area: thingstoknow;
+  margin-left: 50px;
+}
+
+.host {
+  width: auto;
+  height: auto;
+  grid-area: host;
+  margin-left: 50px;
+}
+
+
+.location {
+  width: auto;
+  height: auto;
+  grid-area: location;
+  margin-left: 50px;
+}
