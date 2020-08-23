@@ -1,34 +1,22 @@
 
 
-.page {
-  height: 5000px;
-  width: 1400px;
-  display: grid;
-  grid-template-areas: "nav  nav  nav  nav  nav  nav"
-                       "gal  gal  gal  gal gal  gal"
-                       "gal  gal  gal  gal gal  gal"
-                       "desc  desc  desc  cal  cal  cal"
-                       "desc  desc  desc  cal  cal  cal"
-                       "sleeping  sleeping  sleeping  cal  cal  cal"
-                       "sleeping  sleeping  sleeping  cal  cal  cal"
-                       "fcal  fcal  fcal  cal  cal  cal"
-                       "rev  rev  rev  rev  rev  rev"
-                       "location  location  location  location  location  location"
-                       "host  host  host  host  host  host"
-                       "thingstoknow  thingstoknow  thingstoknow  thingstoknow  thingstoknow  thingstoknow"
-                       "more  more  more  more  more  more"
-                       "bottomnav  bottomnav  bottomnav  bottomnav  bottomnav  bottomnav";
-  /* grid-template-rows: auto; */
-
-  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
 .nav {
   width: auto;
   height: auto;
-  grid-area: nav;
+}
+
+.grid {
+  display: grid;
+  margin: auto;
+  border-width: thick;
+  grid-template-areas: "desc  cal"
+                       "sleeping  cal"
+                       "fakeca  cal";
+  /* grid-template-rows: auto; */
+
+  grid-template-rows: 1fr 1fr 1fr;
+
+  grid-template-columns: 470px 1fr;
 }
 
 
@@ -37,21 +25,38 @@
 } */
 
 .gal {
-  grid-area: gal;
+  margin-right: 10%;
 }
 
-.cal {
+.container {
+  height:2050px;
   grid-area: cal;
-  position: fixed;
+}
+
+
+.cal {
+
+  /* position: sticky; */
   margin-left: 50%;
   top: 25%;
   right: 12%;
+  text-align: center;
   /* align-content: flex-end; */
+  /* display: flex;
+  justify-content: space-around; */
+  /* align-items: flex-start; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  grid-area: cal;
+  padding-top: 10%;
+
+
 }
 
 .more {
-  grid-area: more;
-  padding-top: 75px;
+  padding-top: 5px;
+padding-bottom: 5px;
 }
 
 .desc {
@@ -71,36 +76,32 @@
 .rev {
   width: auto;
   height: auto;
-  grid-area: rev;
   margin-left: 50px;
 }
 
 .bottomnav {
   width: auto;
   height: auto;
-  grid-area: bottomnav;
   vertical-align: bottom;
   margin-left: 50px;
 }
 
-.fcal {
+.fakeca {
   width: auto;
   height: auto;
-  grid-area: fcal;
+  grid-area: fakeca;
   margin-left: 50px;
 }
 
 .thingstoknow {
   width: auto;
   height: auto;
-  grid-area: thingstoknow;
   margin-left: 50px;
 }
 
 .host {
   width: auto;
   height: auto;
-  grid-area: host;
   margin-left: 50px;
 }
 
@@ -108,6 +109,5 @@
 .location {
   width: auto;
   height: auto;
-  grid-area: location;
   margin-left: 50px;
 }
